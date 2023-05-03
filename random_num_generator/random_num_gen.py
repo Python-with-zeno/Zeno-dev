@@ -7,7 +7,7 @@ A tömb egy komplex változó, amibe több más változót lehet beletenni, úgy
 A tömb indexelése 0-tól kezdődik. Ezekkel az indexekkel lehet elérni az adott lemeket, persz ehhez tudnunk kell, hogy melyik elem hányadik indexen helyezkedik el!
 Azért szokták mondani, hogy a programozónak 9 ujja van a 0, az 1, a 2, a 3 ... és a 9! :D
 """
-#               0       1       2
+#               0       1       2 - a tömb indexei és a hozzá tartozó értékek
 kopapirollo = ["kő", "papír", "olló"] # tömb vagy array változó
 
 # Ide konzolba kiiratunk pár üzenetet, hogy a programunk barátságos legyen!
