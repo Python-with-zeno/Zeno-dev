@@ -4,14 +4,15 @@ import pygame
 # pygame
 
 pygame.init()
-screen = pygame.display.set_mode((800, 600))
+WIDTH, HEIGHT = 800, 600
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Kő papír olló")
 clock = pygame.time.Clock()
 
 # images
-ko = pygame.image.load("./images/01.png")
-papir = pygame.image.load("./images/02.png")
-ollo = pygame.image.load("./images/03.png")
+ko = pygame.image.load("./images/01.png").convert_alpha()
+papir = pygame.image.load("./images/02.png").convert_alpha()
+ollo = pygame.image.load("./images/03.png").convert_alpha()
 
 # colors
 white = (255, 255, 255)
@@ -25,14 +26,14 @@ font = pygame.font.Font('freesansbold.ttf', 32)
 
 user_text = font.render('Te', True, white, black)
 user_text_rect = user_text.get_rect()
-user_text_rect.center = (100, 100)
+user_text_rect.center = ((WIDTH//2)-300, 100)
 komputer_text = font.render('Komputer', True, white, black)
 komputer_text_rect = komputer_text.get_rect()
-komputer_text_rect.center = (400, 100)
+komputer_text_rect.center = ((WIDTH//2)+100, 100)
 
-winner_text = font.render('Győztes', True, white, black)
+winner_text = font.render('Nincs győztes!?', True, white, black)
 winner_text_rect = winner_text.get_rect()
-winner_text_rect.center = (300, 50)
+winner_text_rect.center = ((WIDTH//2), 50)
 
 # globals
 
@@ -64,7 +65,7 @@ while running:
     if event.type == pygame.QUIT:
       running = False
     if event.type == pygame.KEYDOWN:
-      if event.key == pygame.K_ESCAPE or event.key == pygame.K_ESCAPE:
+      if event.key == pygame.K_ESCAPE:
         running = False
       if event.key == pygame.K_UP:
         gyoztest_mutasd = False
@@ -82,16 +83,16 @@ while running:
         winner_text = font.render(ki_a_gyoztes, True, white, black)
         gyoztest_mutasd = True
 
-  screen.fill((0, 0, 0))
+  screen.fill(black)
 
   if gyoztest_mutasd:
     screen.blit(winner_text, winner_text_rect)
 
   screen.blit(user_text, user_text_rect)
-  screen.blit(szabaly[felh_valasztasa]["image"], (100, 250))
+  screen.blit(szabaly[felh_valasztasa]["image"], ((WIDTH//2)-300, 250))
 
   screen.blit(komputer_text, komputer_text_rect)
-  screen.blit(szabaly[komputer_valasztasa]["image"], (400, 250))
+  screen.blit(szabaly[komputer_valasztasa]["image"], ((WIDTH//2)+100, 250))
 
   pygame.display.update()
   clock.tick(60)
