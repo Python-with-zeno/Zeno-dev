@@ -1,3 +1,5 @@
+# Az appról készült felvétel itt található: https://drive.google.com/file/d/1015PTQQu4gUOaprkD5al0eta5E8Rd5uH/view?usp=share_link
+
 import random # importáljuk a random python libraryt - hogy ezzel tudjunk létrehozni majd véletlen számot.
 
 komputer_valasztasa = random.randint(0, 2) # Máris létrehozunk egy változót, aminek sorsolhatunk egy véletlen számot 0 és 2 között, tehát 0, 1, 2 lehet.
