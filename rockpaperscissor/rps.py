@@ -1,3 +1,5 @@
+# A kis appról készült felvétel itt érhető el:  https://drive.google.com/file/d/1IUCqaOgdGfFTt6vvgnjv0-bFg66dCM_V/view?usp=share_link
+
 import random
 
 #               0       1       2
