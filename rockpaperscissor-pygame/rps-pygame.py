@@ -4,7 +4,7 @@ import pygame
 # pygame
 
 pygame.init()
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 1024, 768
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Kő papír olló")
 clock = pygame.time.Clock()
