@@ -1,4 +1,5 @@
-
+# video itt: https://drive.google.com/file/d/1n6ic8j28o99Q0AU4oybxZnj4cf-QcVP0/view?usp=drive_link
+# pygame doc itt: https://www.pygame.org/docs/
 
 import pygame
 
@@ -40,7 +41,7 @@ while True:
   screen.fill((255, 255, 255))
 
   screen.blit(objects[user_select], (user_x, user_y))
-  screen.blit(
+  screen.blit("Te", user_text, (user_x, user_y - 50))
 
   pygame.display.update()
   clock.tick(60)
