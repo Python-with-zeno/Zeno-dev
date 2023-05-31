@@ -23,10 +23,10 @@ try:
     user_num = int(user_num)
 except:
     hiba()
-    
-if int(user_num) >= len(kopapirollo):
+
+if user_num >= len(kopapirollo):
     hiba()
-    
+
 user = kopapirollo[user_num]
 
 #itt ahelyett, hogy ifekkel ellenőriznénk, hogy mi a user választása, egyszerűen a tömbből kivesszük a választott elemet
